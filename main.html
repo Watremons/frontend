@@ -90,9 +90,7 @@
 
     <!--导航条-->
     <ul class="layui-nav " lay-filter="" style="width:1440px;text-align: center;margin: 0 auto;">
-
-        <li
-            style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
+        <li style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
             <!-- logo -->
             <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>
         </li>
@@ -207,16 +205,16 @@
                     </div>
                 </div>
 
-                    <div class="layui-col-md3 layui-col-xs3" v-for="work in works">
-                        <div class="grid-demo grid-demo-bg1">
-                            <div class="kcjywStyle">
-                                <div style="padding-top:60px">
-                                    <i class="layui-icon layui-icon-dollar iconStyle" style="font-size:100px;"></i> <br>
-                                    {{ work.name }}
-                                </div>
+                <div class="layui-col-md3 layui-col-xs3" v-for="work in works">
+                    <div class="grid-demo grid-demo-bg1">
+                        <div class="kcjywStyle">
+                            <div style="padding-top:60px">
+                                <i class="layui-icon layui-icon-dollar iconStyle" style="font-size:100px;"></i> <br>
+                                {{ work.name }}
                             </div>
                         </div>
                     </div>
+                </div>
 
             </div>
         </div>
@@ -253,91 +251,93 @@
     <!-- 经典案例 -->
     <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
         <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-col-md3">
-                <div class="layui-row grid-demo">
-                    <div style="padding-top:150px">
-                        <i class="layui-icon layui-icon-note iconStyle" style="font-size:100px;"></i> <br>
-                        <div class="jdanaStyle">
-                            经典案例
+            <div class="layui-row">
+                <div class="layui-col-md3">
+                    <div class="layui-row grid-demo">
+                        <div style="padding-top:150px">
+                            <i class="layui-icon layui-icon-note iconStyle" style="font-size:100px;"></i> <br>
+                            <div class="jdanaStyle">
+                                经典案例
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="layui-col-md9">
-                <div class="layui-row grid-demo grid-demo-bg1">
-                    <div style="padding-top:40px">
-                        <div class="layui-col-md2">
-                            <a href="#">
-                                <div class="box jdanbStyle">
-                                    <img src="/img/ClassicCase1.jpg" style="width: 250px;"><br>
-                                    工商事务记账报税
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 250px;
-                                        height: 220px;
-                                        text-align: center;
-                                    }
+                <div class="layui-col-md9">
+                    <div class="layui-row grid-demo grid-demo-bg1">
+                        <div style="padding-top:40px">
+                            <div class="layui-col-md2">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/ClassicCase1.jpg" style="width: 250px;"><br>
+                                        工商事务记账报税
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 250px;
+                                            height: 220px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
-                        </div>
-                        <div class="layui-col-md2 layui-col-md-offset4">
-                            <a href="#">
-                                <div class="box jdanbStyle">
-                                    <img src="/img/ClassicCase2.jpg" style="width: 250px;"><br>
-                                    商标专利知识产权
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md2 layui-col-md-offset4">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/ClassicCase2.jpg" style="width: 250px;"><br>
+                                        商标专利知识产权
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
-                        </div>
-                        <div class="layui-col-md2 layui-col-md-offset3">
-                            <a href="#">
-                                <div class="box jdanbStyle">
-                                    <img src="/img/ClassicCase3.jpg" style="width: 250px;"><br>
-                                    注册会计师
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md2 layui-col-md-offset3">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/ClassicCase3.jpg" style="width: 250px;"><br>
+                                        注册会计师
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
-                        </div>
-                        <div class="layui-col-md2 layui-col-md-offset4">
-                            <a href="#">
-                                <div class="box jdanbStyle">
-                                    <img src="/img/ClassicCase4.jpg" style="width: 250px;"><br>
-                                    注册税务师
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md2 layui-col-md-offset4">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/ClassicCase4.jpg" style="width: 250px;"><br>
+                                        注册税务师
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -348,75 +348,78 @@
     <!-- 处理中案例 -->
     <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
         <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-col-md9">
-                <div class="layui-row">
-                    <div style="padding-top:40px">
-                        <div class="layui-col-md3 layui-col-md-offset2 grid-demo-bg1">
-                            <a href="#">
-                                <div class="box clzalbStyle">
-                                    <img src="/img/CaseInProcess1.jpg" style="width: 250px;"><br>
-                                    处理中案例一
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+            <div class="layui-row">
+                <div class="layui-col-md9">
+                    <div class="layui-row grid-demo grid-demo-bg1">
+                        <div style="padding-top:40px">
+                            <div class="layui-col-md3 layui-col-md-offset2">
+                                <a href="#">
+                                    <div class="box clzalbStyle">
+                                        <img src="/img/CaseInProcess1.jpg" style="width: 250px;"><br>
+                                        处理中案例一
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
-                        </div>
-                        <div class="layui-col-md3 layui-col-md-offset3">
-                            <a href="#">
-                                <div class="box clzalbStyle">
-                                    <img src="/img/CaseInProcess2.jpg" style="width: 250px;"><br>
-                                    处理中案例二
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md3 layui-col-md-offset3">
+                                <a href="#">
+                                    <div class="box clzalbStyle">
+                                        <img src="/img/CaseInProcess2.jpg" style="width: 250px;"><br>
+                                        处理中案例二
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
-                        </div>
-                        <div class="layui-col-md3 grid-demo-bg1 layui-col-md-offset5">
-                            <a href="#">
-                                <div class="box clzalbStyle">
-                                    处理中案例三<br>
-                                    <img src="/img/CaseInProcess3.jpg" style="width: 250px;">
-                                </div>
-                                <style>
-                                    .box {
-                                        width: 300px;
-                                        text-align: center;
-                                    }
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md3 layui-col-md-offset5">
+                                <a href="#">
+                                    <div class="box clzalbStyle">
+                                        <img src="/img/CaseInProcess3.jpg" style="width: 250px; height: 190px;"><br>
+                                        处理中案例三
+                                    </div>
+                                    <style>
+                                        .box {
+                                            width: 300px;
+                                            text-align: center;
+                                        }
 
-                                    .box img {
-                                        width: 100%
-                                    }
-                                </style>
-                            </a>
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="layui-col-md3">
-                <div class="layui-row grid-demo">
-                    <div style="padding-top:150px">
-                        <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
-                        <div class="clzalaStyle">
-                            处理中案例
+                <div class="layui-col-md3">
+                    <div class="layui-row grid-demo">
+                        <div style="padding-top:150px">
+                            <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
+                            <div class="clzalaStyle">
+                                处理中案例
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -424,99 +427,81 @@
     <!-- 会计师介绍 -->
     <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
         <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-col-md9">
-                <div class="layui-row">
-                    <div style="padding-top:40px">
-                        <div class="layui-col-md3">
-                            <div class="layui-row grid-demo">
-                                <div style="padding-top:150px">
-                                    <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
-                                    <div class="clzalaStyle">
-                                        会计师介绍
-                                    </div>
-                                </div>
+            <div class="layui-row">
+                <div class="layui-col-md3">
+                    <div class="layui-row grid-demo">
+                        <div style="padding-top:150px">
+                            <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
+                            <div class="clzalaStyle">
+                                会计师介绍
                             </div>
                         </div>
-
-                        <div class="layui-col-md9">
-                            <div class="layui-row grid-demo grid-demo-bg1" style="margin-left: 100px;">
-                                <div style="padding-top:40px">
-                                    <div class="layui-col-md2">
-                                        <a href="#">
-                                            <div class="box jdanbStyle">
-                                                <img src="/img/people1.jpg" style="width: 250px;height: 220px;">
-                                                <br>
-                                                会计师1
-                                            </div>
-                                            <style>
-                                                .box {
-                                                    width: 250px;
-                                                    height: 220px;
-                                                    text-align: center;
-                                                }
-
-                                                .box img {
-                                                    width: 100%
-                                                }
-                                            </style>
-                                        </a>
+                    </div>
+                </div>
+                <div class="layui-col-md9">
+                    <div class="layui-row grid-demo grid-demo-bg1">
+                        <div style="padding-top:40px">
+                            <div class="layui-col-md3 layui-col-md-offset2">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/people1.jpg" style="width: 250px;"><br>
+                                        会计师1
                                     </div>
-                                    <div class="layui-col-md2 layui-col-md-offset4">
-                                        <a href="#">
-                                            <div class="box jdanbStyle" style="margin-left: 190px;">
-                                                <img src="/img/people2.jpg" style="width: 250px;height: 220px;">
-                                                <br>
-                                                会计师2
-                                            </div>
-                                            <style>
-                                                .box {
-                                                    width: 250px;
-                                                    height: 220px;
-                                                    text-align: center;
-                                                }
+                                    <style>
+                                        .box {
+                                            width: 250px;
+                                            text-align: center;
+                                        }
 
-                                                .box img {
-                                                    width: 100%
-                                                }
-                                            </style>
-                                        </a>
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md3 layui-col-md-offset3">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/people2.jpg" style="width: 250px;"><br>
+                                        会计师2
                                     </div>
-                                    <div class="layui-col-md2 layui-col-md-offset4">
-                                        <a href="#">
-                                            <div class="box jdanbStyle" style="margin-top: 20px; margin-left: 30px;">
-                                                <img src="/img/people3.jpg" style="width: 250px;height: 220px;">
-                                                <br>
-                                                会计师3
-                                            </div>
-                                            <style>
-                                                .box {
-                                                    width: 250px;
-                                                    height: 220px;
-                                                    text-align: center;
-                                                }
+                                    <style>
+                                        .box {
+                                            width: 250px;
+                                            text-align: center;
+                                        }
 
-                                                .box img {
-                                                    width: 100%
-                                                }
-                                            </style>
-                                        </a>
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
+                            </div>
+                            <div class="layui-col-md3 layui-col-md-offset5">
+                                <a href="#">
+                                    <div class="box jdanbStyle">
+                                        <img src="/img/people3.jpg" style="width: 250px;">
+                                        <br>
+                                        会计师3
                                     </div>
-                                </div>
+                                    <style>
+                                        .box {
+                                            width: 250px;
+                                            text-align: center;
+                                        }
+
+                                        .box img {
+                                            width: 100%
+                                        }
+                                    </style>
+                                </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div>
-        <div style="padding-top:40px">
-            <hr class="layui-bg-black">
-        </div>
-    </div>
-
 
     <!-- 尾部信息 -->
     <div style="text-align: center;">
