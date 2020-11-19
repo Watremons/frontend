@@ -70,7 +70,6 @@
             font: bold 30px arial, sans-serif;
             color: #AAAAAA;
             height: 200px;
-
         }
 
         .clzalbStyle {
@@ -191,33 +190,30 @@
 
 
 
-    <!-- 可承接业务-->
-    <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;" id="workToShow">
+    <!-- 业务范围-->
+    <div class="layui-card layui-bg-black" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;" id="workToShow">
         <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-row">
-
-                <div class="layui-col-md3 layui-col-xs3">
-                    <div class="grid-demo grid-demo-bg1">
-                        <!--这里的lineheight用来使“业务范围”居中 -->
-                        <div class="kcjywStyle" style="line-height:300px;">
-                            <i class="layui-icon layui-icon-senior iconStyle" style="font-size:50px;"></i>
-                            业务范围
+                <div class="layui-row">
+                    <div class="layui-col-md3 layui-col-xs3">
+                        <div class="grid-demo grid-demo-bg1">
+                            <!--这里的lineheight用来使“业务范围”居中 -->
+                            <div class="kcjywStyle" style="line-height:300px;">
+                                <i class="layui-icon layui-icon-senior iconStyle" style="font-size:50px;"></i>
+                                业务范围
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="layui-col-md3 layui-col-xs3" v-for="work in works">
-                    <div class="grid-demo grid-demo-bg1">
-                        <div class="kcjywStyle">
-                            <div style="padding-top:60px">
-                                <i class="layui-icon layui-icon-dollar iconStyle" style="font-size:100px;"></i> <br>
-                                {{ work.name }}
+                    <div class="layui-col-md3 layui-col-xs3" v-for="work in works">
+                        <div class="grid-demo grid-demo-bg1">
+                            <div class="kcjywStyle">
+                                <div style="padding-top:60px">
+                                    <i class="layui-icon layui-icon-dollar iconStyle" style="font-size:100px;"></i> <br>
+                                    {{ work.name }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
         </div>
     </div>
 
@@ -325,81 +321,77 @@
     </script>
 
     <!-- 处理中案例 -->
-    <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
-        <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-row">
-                <div class="layui-col-md9">
-                    <div class="layui-row grid-demo grid-demo-bg1">
-                        <div style="padding-top:40px">
-                            <div class="layui-col-md3 layui-col-md-offset2">
-                                <a href="#">
-                                    <div class="box clzalbStyle">
-                                        <img src="/img/CaseInProcess1.jpg" style="width: 250px;"><br>
-                                        处理中案例一
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 300px;
-                                            text-align: center;
-                                        }
-
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
+    <div class="layui-card layui-bg-black" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
+            <div style="box-shadow: 10px 10px 5px #888888;">
+                <div class="layui-row">
+                    <div class="layui-col-md9">
+                        <div class="layui-row grid-demo grid-demo-bg1">
+                            <div style="padding-top:40px">
+                                <div class="layui-col-md3 layui-col-md-offset2">
+                                    <a href="#">
+                                        <div class="box clzalbStyle">
+                                            <img src="/img/CaseInProcess1.jpg" style="width: 250px;"><br>
+                                            处理中案例一
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 300px;
+                                                text-align: center;
+                                            }
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
+                                <div class="layui-col-md3 layui-col-md-offset3">
+                                    <a href="#">
+                                        <div class="box clzalbStyle">
+                                            <img src="/img/CaseInProcess2.jpg" style="width: 250px;"><br>
+                                            处理中案例二
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 300px;
+                                                text-align: center;
+                                            }
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
+                                <div class="layui-col-md3 layui-col-md-offset5">
+                                    <a href="#">
+                                        <div class="box clzalbStyle">
+                                            <img src="/img/CaseInProcess3.jpg" style="width: 250px; height: 190px;"><br>
+                                            处理中案例三
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 300px;
+                                                text-align: center;
+                                            }
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="layui-col-md3 layui-col-md-offset3">
-                                <a href="#">
-                                    <div class="box clzalbStyle">
-                                        <img src="/img/CaseInProcess2.jpg" style="width: 250px;"><br>
-                                        处理中案例二
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 300px;
-                                            text-align: center;
-                                        }
-
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
-                            </div>
-                            <div class="layui-col-md3 layui-col-md-offset5">
-                                <a href="#">
-                                    <div class="box clzalbStyle">
-                                        <img src="/img/CaseInProcess3.jpg" style="width: 250px; height: 190px;"><br>
-                                        处理中案例三
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 300px;
-                                            text-align: center;
-                                        }
-
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <div class="layui-row grid-demo">
+                            <div style="padding-top:150px">
+                                <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
+                                <div class="clzalaStyle">
+                                    处理中案例
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="layui-col-md3">
-                    <div class="layui-row grid-demo">
-                        <div style="padding-top:150px">
-                            <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
-                            <div class="clzalaStyle">
-                                处理中案例
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 
@@ -482,41 +474,65 @@
         </div>
     </div>
 
+
     <!-- 尾部信息 -->
-    <div style="text-align: center;">
-        <div class="layui-bg-black">
-            <div class="layui-row" style="text-align: center">
-                <div class="layui-col-md3" style="margin-top: 100px">
-                    <div>
-                        <i class="layui-icon layui-icon-email" style="font-size: 100px; color: #1E9FFF;"></i> <br>
-                        <div class="clzalaStyle">
-                            电子邮箱
+    <div class="layui-card layui-bg-black" style="width:1440px; height: 150px; border: #9F9F9F;margin:20px auto;text-align: center;">
+
+            <div class="layui-row">
+                <div class="layui-col-md8 layui-col-md-offset2">
+                    <div class="layui-row grid-demo grid-demo-bg1">
+                        <div class="layui-col-md3" >
+                            <div class="layui-row" style="text-align: center;padding: 12%;">
+                                <a href="/contactInfo.html">
+                                    <i class="layui-icon layui-icon-location"
+                                        style="font-size: 50px; color: #1E9FFF;"></i> <br>
+                                    <div class="clzalaStyle" style="height: 100%;"> 
+                                        地址
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="layui-col-md3" >
+                            <div class="layui-row" style="text-align: center;padding: 12%;">
+                                <a href="/contactInfo.html">
+                                    <i class="layui-icon layui-icon-email"
+                                        style="font-size: 50px; color: #1E9FFF;"></i>
+                                    <br>
+                                    <div class="clzalaStyle" style="height: 100%;">
+                                        电子邮箱
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3" >
+                            <div class="layui-row" style="text-align: center;padding: 12%;">
+                                <a href="/contactInfo.html">
+                                    <i class="layui-icon layui-icon-service"
+                                        style="font-size: 50px; color: #1E9FFF;"></i>
+                                    <br>
+                                    <div class="clzalaStyle"  style="height: 100%;">
+                                        联系电话
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3" >
+                            <div class="layui-row" style="text-align: center;padding: 12%;">
+                                <a href="/contactInfo.html">
+                                    <i class="layui-icon layui-icon-login-qq"
+                                        style="font-size: 50px; color: #1E9FFF;"></i>
+                                    <br>
+                                    <div class="clzalaStyle"  style="height: 100%;">
+                                        QQ
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-md3" style="margin-top: 100px">
-                    <i class="layui-icon layui-icon-service" style="font-size: 100px; color: #1E9FFF;">
-                        <div class="clzalaStyle">
-                            联系电话
-                        </div>
-                    </i>
-                </div>
-                <div class="layui-col-md3" style="margin-top: 100px">
-                    <i class="layui-icon layui-icon-location" style="font-size: 100px; color: #1E9FFF;">
-                        <div class="clzalaStyle">
-                            地址
-                        </div>
-                    </i>
-                </div>
-                <div class="layui-col-md3" style="margin-top: 100px">
-                    <i class="layui-icon layui-icon-login-qq" style="font-size: 100px; color: #1E9FFF;">
-                        <div class="clzalaStyle">
-                            QQ
-                        </div>
-                    </i>
+
                 </div>
             </div>
-        </div>
+        
     </div>
 
 
