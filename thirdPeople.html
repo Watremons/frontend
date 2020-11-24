@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>经典案例</title>
 
     <link rel="stylesheet" href="layui/css/layui.css">
-
     <style type="text/css">
         /**
          * @Description Layui内置导航栏修改样式
@@ -85,106 +85,50 @@
         ul.pagination li a:hover:not(.active) {background-color: #ddd;}
     </style>
 </head>
+
 <body>
 
-<script src="layui/layui.js"></script>
+    <script src="layui/layui.js"></script>
 
-<!--导航条-->
-<div class="layui-header">
-    <ul class="layui-nav " lay-filter="" style="width:1440px;text-align: center;margin: 0 auto;">
-
-        <li style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
-            <!-- logo -->
-            <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>
-        </li>
-
-        <li class="layui-nav-item " >
-            <a href="./main.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-home iconStyle"></i>
-                首页
-            </a>
-        </li>
-        <li class="layui-nav-item">
-
-            <a href="./businessScope.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-senior iconStyle" ></i>
-                业务范围
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondPeople.html" class="dhlStyle">
-                <i class="layui-icon layui-icon-username iconStyle"></i>
-                会计师介绍
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondClassic.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-note iconStyle" ></i>
-                经典案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./caseInProcess2.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-survey iconStyle" ></i>
-                处理中案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./contactInfo.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-dialogue iconStyle" ></i>
-                联系我们
-            </a>
-        </li>
-        <li style="display:inline-block;*display:inline;">
-            <button type="button"   class="layui-btn layui-btn-normal" onclick="javascrtpt:window.location.href='./login.html'" style="width:100px;margin-top: 10px;margin-left:70px">登录</button>
-        </li>
-    </ul>
-</div>
-<!--导航条JS-->
-<script>
-    //注意：导航 依赖 element 模块，否则无法进行功能性操作
-    layui.use('element', function(){
-        var element = layui.element;
-    });
-</script>
-
-<div style="width:1440px;text-align: center;margin: 0 auto;">
-        <ul class="layui-nav layui-nav-tree"  lay-filter="test"style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF" >
+    <div style="text-align: center;margin: 0 auto;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test"
+            style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF">
             <div style="text-align:center; font-size: 25px;color: #0C0C0C;margin:20px 0px;">
                 <i class="layui-icon layui-icon-read" style="font-size: 30px; "></i>
                 会计师介绍
             </div>
             <hr class="layui-bg-black" style="margin:0 auto">
-            <li class="layui-nav-item"  ><a href="">会计师介绍目录</a></li>
+            <li class="layui-nav-item"><a href="">会计师介绍目录</a></li>
             <hr class="layui-bg-black" style="margin:0 auto">
             <li class="layui-nav-item"><a href="">会计师类型1</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
+            <hr class="layui-bg-black" style="margin:0 auto">
             <li class="layui-nav-item"><a href="">会计师类型2</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
+            <hr class="layui-bg-black" style="margin:0 auto">
             <li class="layui-nav-item"><a href="">会计师类型3</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
+            <hr class="layui-bg-black" style="margin:0 auto">
             <li class="layui-nav-item"><a href="">会计师类型4</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
+            <hr class="layui-bg-black" style="margin:0 auto">
         </ul>
 
-    <div style="background-color:#EEEEEE;height:500px;margin-top: 20px;margin-left: 220px">
-        <img src="img/Classic.jpg" style="float:left;width:300px;margin-right: 20px;">
-        <h1 style="padding: 20px">张三</h1>
-        <div style="text-align: left">
-            <h3>
-            张三取得了CPA全过的资质，并且参与了balabalbalblablablavbjdaiouwefgaosufgl考试
-            </h3>
-            <h3>
-                拥有丰富的战略伙伴资源，包括了湖南省财政厅、湖南省科技厅、湖南省国资委、湖南省国土资源整治局、
-                长沙市国资委、长沙市财政局、国家开发银行、中国银行、工商银行、农业银行、建设银行、浦发银行、华融湘江银行、
-                农业发展银行、湖南省中小企业信用担保有限责任公司、衡阳高新区、衡阳市北山高新区、永州市中级人民法院、衡阳市中级人民法院、
-                郴州市中级人民法院、湖南农业信用担保有限公司等相关部门制定入围审计机构以及湖南省高级人民法院对外委托鉴定机构具有丰富的执业经验。
-            </h3>
+        <div style="background-color:#EEEEEE;height:500px;margin-top: 20px;margin-left: 220px">
+            <img src="img/Classic.jpg" style="float:left;width:300px;margin-right: 20px;">
+            <h1 style="padding: 20px">张三</h1>
+            <div style="text-align: left">
+                <h3>
+                    张三取得了CPA全过的资质，并且参与了balabalbalblablablavbjdaiouwefgaosufgl考试
+                </h3>
+                <h3>
+                    拥有丰富的战略伙伴资源，包括了湖南省财政厅、湖南省科技厅、湖南省国资委、湖南省国土资源整治局、
+                    长沙市国资委、长沙市财政局、国家开发银行、中国银行、工商银行、农业银行、建设银行、浦发银行、华融湘江银行、
+                    农业发展银行、湖南省中小企业信用担保有限责任公司、衡阳高新区、衡阳市北山高新区、永州市中级人民法院、衡阳市中级人民法院、
+                    郴州市中级人民法院、湖南农业信用担保有限公司等相关部门制定入围审计机构以及湖南省高级人民法院对外委托鉴定机构具有丰富的执业经验。
+                </h3>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
+
 </html>
 
 <script src="static/script/jquery.min.js"></script>

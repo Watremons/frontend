@@ -83,116 +83,53 @@
 </head>
 
 <body>
-
     <script src="/layui/layui.js"></script>
     <script src="/js/jquery.min.js"></script>
+    <div>
+        <!-- 轮播图  -->
+        <div style="text-align: center;width: 100%;">
+            <div style="text-align: center;width:1440px;margin: 0 auto">
+                <div class="layui-carousel" id="test1" lay-anim lay-indicator="inside" lay-arrow="always"
+                    style="text-align: center;margin-top:10px;width:100%;">
 
-    <!--导航条-->
-    <ul class="layui-nav " lay-filter="" style="width:1440px;text-align: center;margin: 0 auto;">
-        <li
-            style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
-            <!-- logo -->
-            <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>
-        </li>
-
-        <li class="layui-nav-item ">
-            <a href="./main.html" class="dhlStyle">
-                <i class="layui-icon layui-icon-home iconStyle"></i>
-                首页
-            </a>
-        </li>
-        <li class="layui-nav-item">
-
-            <a href="./businessScope.html" class="dhlStyle">
-                <i class="layui-icon layui-icon-senior iconStyle"></i>
-                业务范围
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondPeople.html" class="dhlStyle">
-                <i class="layui-icon layui-icon-username iconStyle"></i>
-                会计师介绍
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondClassic.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-note iconStyle" ></i>
-                经典案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./caseInProcess2.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-survey iconStyle" ></i>
-                处理中案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./contactInfo.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-dialogue iconStyle" ></i>
-                联系我们
-            </a>
-        </li>
-        <li style="display:inline-block;*display:inline;">
-            <button type="button" class="layui-btn layui-btn-normal"
-                onclick="javascrtpt:window.location.href='./login.html'"
-                style="width:100px;margin-top: 10px;margin-left:70px">登录</button>
-        </li>
-    </ul>
-    <!--导航条JS-->
-    <script>
-        //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use('element', function () {
-            var element = layui.element;
-        });
-    </script>
-
-
-
-    <!-- 轮播图 -->
-    <div style="text-align: center;width: 100%;">
-        <div style="text-align: center;width:1440px;margin: 0 auto">
-            <div class="layui-carousel" id="test1" lay-anim lay-indicator="inside" lay-arrow="always"
-                style="text-align: center;margin-top:10px;width:100%;">
-
-                <div carousel-item>
-                    <div style="text-align: center;">
-                        <img src="/img/banner1.jpg" style="width: 1440px;">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/img/banner2.jpg" style="width: 1440px;">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/img/banner3.jpg" style="width: 1440px;">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/img/banner4.jpg" style="width: 1440px;">
+                    <div carousel-item>
+                        <div style="text-align: center;">
+                            <img src="/img/banner1.jpg" style="width: 1440px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="/img/banner2.jpg" style="width: 1440px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="/img/banner3.jpg" style="width: 1440px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <img src="/img/banner4.jpg" style="width: 1440px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- 轮播图JS  -->
-    <script>
-        layui.use('carousel', function () {
-            var carousel = layui.carousel;
-            //建造实例
-            carousel.render({
-                elem: '#test1',
-                width: '100%' //设置容器宽度
-                    ,
-                height: '400px',
-                arrow: 'always' //始终显示箭头
-                //,anim: 'updown' //切换动画方式
+        <!-- 轮播图JS  -->
+        <script>
+            layui.use('carousel', function () {
+                var carousel = layui.carousel;
+                //建造实例
+                carousel.render({
+                    elem: '#test1',
+                    width: '100%' //设置容器宽度
+                        ,
+                    height: '400px',
+                    arrow: 'always' //始终显示箭头
+                    //,anim: 'updown' //切换动画方式
+                });
             });
-        });
-    </script>
+        </script>
 
 
-
-    <!-- 业务范围-->
-    <div class="layui-card layui-bg-black" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;" id="workToShow">
-        <div style="box-shadow: 10px 10px 5px #888888;">
+        <!-- 业务范围-->
+        <div class="layui-card layui-bg-black" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;"
+            id="workToShow">
+            <div style="box-shadow: 10px 10px 5px #888888;">
                 <div class="layui-row">
                     <div class="layui-col-md3 layui-col-xs3">
                         <div class="grid-demo grid-demo-bg1">
@@ -214,114 +151,116 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        new Vue({
-            el: '#workToShow',
-            data: {
-                works: []
-            },
-            created: function () {
-                //为了在内部函数能使用外部函数的this对象，要给它赋值了一个名叫self的变量。
-                this.getAllWorks()
-            },
-            methods: {
-                getAllWorks: function () {
-                    var self = this;
-                    
-                    axios
-                        .get("http://localhost:8080/Apis/getWorksToShow")
-                        .then(response => (
-                            this.works = response.data.works,
-                            alert(JSON.stringify(response.data))
-                        ))
-                        .catch(function (error) { // 请求失败处理
-                            alert("数据请求失败wdnmd");
-                        });
-                        
+        <script>
+            new Vue({
+                el: '#workToShow',
+                data: {
+                    works: []
+                },
+                created: function () {
+                    //为了在内部函数能使用外部函数的this对象，要给它赋值了一个名叫self的变量。
+                    this.getAllWorks()
+                },
+                methods: {
+                    getAllWorks: function () {
+                        var self = this;
+
+                        axios
+                            .get("http://localhost:8080/Apis/getWorksToShow")
+                            .then(response => (
+                                this.works = response.data.works,
+                                alert(JSON.stringify(response.data))
+                            ))
+                            .catch(function (error) { // 请求失败处理
+                                alert("数据请求失败wdnmd");
+                            });
+
+                    }
+
                 }
+            })
+        </script>
 
-            }
-        })
-    </script>
-
-    <!-- 经典案例 -->
-    <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;" id="caseToShow">
-        <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-row">
-                <div class="layui-col-md3">
-                    <div class="layui-row grid-demo">
-                        <div style="padding-top:150px">
-                            <i class="layui-icon layui-icon-note iconStyle" style="font-size:100px;"></i> <br>
-                            <div class="jdanaStyle">
-                                经典案例
+        <!-- 经典案例 -->
+        <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;"
+            id="caseToShow">
+            <div style="box-shadow: 10px 10px 5px #888888;">
+                <div class="layui-row">
+                    <div class="layui-col-md3">
+                        <div class="layui-row grid-demo">
+                            <div style="padding-top:150px">
+                                <i class="layui-icon layui-icon-note iconStyle" style="font-size:100px;"></i> <br>
+                                <div class="jdanaStyle">
+                                    经典案例
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-md9">
-                    <div class="layui-row grid-demo grid-demo-bg1">
-                        <div style="padding-top:120px">
-                            <div class="layui-col-md3" v-for="onecase in cases">
-                                <a href="#">
-                                    <div class="box jdanbStyle">
-                                        <!-- 这里很重要的点：通过冒号+属性 = "'字符串'+变量"来动态生成标签 -->
-                                        <img :src="'data:image/jpg;base64,'+onecase.pic" style="width: 250px;"><br>
-                                        {{onecase.name}}
-                                    </div>
-                                </a>
+                    <div class="layui-col-md9">
+                        <div class="layui-row grid-demo grid-demo-bg1">
+                            <div style="padding-top:120px">
+                                <div class="layui-col-md3" v-for="onecase in cases">
+                                    <a href="#">
+                                        <div class="box jdanbStyle">
+                                            <!-- 这里很重要的点：通过冒号+属性 = "'字符串'+变量"来动态生成标签 -->
+                                            <img :src="'data:image/jpg;base64,'+onecase.pic" style="width: 250px;"><br>
+                                            {{onecase.name}}
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <style>
-        .box {
-            width: 250px;
-            height: 220px;
-            text-align: center;
-        }
-
-        .box img {
-            width: 100%
-        }
-    </style>
-
-    <script>
-        new Vue({
-            el: '#caseToShow',
-            data: {
-                cases: [],
-            },
-            created: function () {
-                //为了在内部函数能使用外部函数的this对象，要给它赋值了一个名叫self的变量。
-                this.getAllCases()
-            },
-            methods: {
-                getAllCases: function () {
-                    var self = this;
-                    axios
-                        .get("http://localhost:8080/Apis/getCasesToShow")
-                        .then(response => (
-                            this.cases = response.data.cases,
-                            alert(JSON.stringify(response.data))
-                        ))
-                        .catch(function (error) { // 请求失败处理
-                            alert("数据请求失败wdnmd");
-                        });
-
-                }
+        <style>
+            .box {
+                width: 250px;
+                height: 220px;
+                text-align: center;
             }
-        })
-    </script>
 
-    <!-- 处理中案例 -->
-    <div class="layui-card layui-bg-black" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
+            .box img {
+                width: 100%
+            }
+        </style>
+
+        <script>
+            new Vue({
+                el: '#caseToShow',
+                data: {
+                    cases: [],
+                },
+                created: function () {
+                    //为了在内部函数能使用外部函数的this对象，要给它赋值了一个名叫self的变量。
+                    this.getAllCases()
+                },
+                methods: {
+                    getAllCases: function () {
+                        var self = this;
+                        axios
+                            .get("http://localhost:8080/Apis/getCasesToShow")
+                            .then(response => (
+                                this.cases = response.data.cases,
+                                alert(JSON.stringify(response.data))
+                            ))
+                            .catch(function (error) { // 请求失败处理
+                                alert("数据请求失败wdnmd");
+                            });
+
+                    }
+                }
+            })
+        </script>
+
+        <!-- 处理中案例 -->
+        <div class="layui-card layui-bg-black"
+            style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
             <div style="box-shadow: 10px 10px 5px #888888;">
                 <div class="layui-row">
                     <div class="layui-col-md9">
@@ -338,6 +277,7 @@
                                                 width: 300px;
                                                 text-align: center;
                                             }
+
                                             .box img {
                                                 width: 100%
                                             }
@@ -355,6 +295,7 @@
                                                 width: 300px;
                                                 text-align: center;
                                             }
+
                                             .box img {
                                                 width: 100%
                                             }
@@ -372,6 +313,7 @@
                                                 width: 300px;
                                                 text-align: center;
                                             }
+
                                             .box img {
                                                 width: 100%
                                             }
@@ -392,111 +334,111 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
 
-    <!-- 会计师介绍 -->
-    <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
-        <div style="box-shadow: 10px 10px 5px #888888;">
-            <div class="layui-row">
-                <div class="layui-col-md3">
-                    <div class="layui-row grid-demo">
-                        <div style="padding-top:150px">
-                            <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
-                            <div class="clzalaStyle">
-                                会计师介绍
+        <!-- 会计师介绍 -->
+        <div class="layui-card" style="width:1440px;border: #9F9F9F;margin:20px auto;text-align: center;">
+            <div style="box-shadow: 10px 10px 5px #888888;">
+                <div class="layui-row">
+                    <div class="layui-col-md3">
+                        <div class="layui-row grid-demo">
+                            <div style="padding-top:150px">
+                                <i class="layui-icon layui-icon-time iconStyle" style="font-size:100px;"></i> <br>
+                                <div class="clzalaStyle">
+                                    会计师介绍
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-md9">
-                    <div class="layui-row grid-demo grid-demo-bg1">
-                        <div style="padding-top:40px">
-                            <div class="layui-col-md3 layui-col-md-offset2">
-                                <a href="#">
-                                    <div class="box jdanbStyle">
-                                        <img src="/img/people1.jpg" style="width: 250px;"><br>
-                                        会计师1
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 250px;
-                                            text-align: center;
-                                        }
+                    <div class="layui-col-md9">
+                        <div class="layui-row grid-demo grid-demo-bg1">
+                            <div style="padding-top:40px">
+                                <div class="layui-col-md3 layui-col-md-offset2">
+                                    <a href="#">
+                                        <div class="box jdanbStyle">
+                                            <img src="/img/people1.jpg" style="width: 250px;"><br>
+                                            会计师1
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 250px;
+                                                text-align: center;
+                                            }
 
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
-                            </div>
-                            <div class="layui-col-md3 layui-col-md-offset3">
-                                <a href="#">
-                                    <div class="box jdanbStyle">
-                                        <img src="/img/people2.jpg" style="width: 250px;"><br>
-                                        会计师2
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 250px;
-                                            text-align: center;
-                                        }
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
+                                <div class="layui-col-md3 layui-col-md-offset3">
+                                    <a href="#">
+                                        <div class="box jdanbStyle">
+                                            <img src="/img/people2.jpg" style="width: 250px;"><br>
+                                            会计师2
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 250px;
+                                                text-align: center;
+                                            }
 
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
-                            </div>
-                            <div class="layui-col-md3 layui-col-md-offset5">
-                                <a href="#">
-                                    <div class="box jdanbStyle">
-                                        <img src="/img/people3.jpg" style="width: 250px;">
-                                        <br>
-                                        会计师3
-                                    </div>
-                                    <style>
-                                        .box {
-                                            width: 250px;
-                                            text-align: center;
-                                        }
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
+                                <div class="layui-col-md3 layui-col-md-offset5">
+                                    <a href="#">
+                                        <div class="box jdanbStyle">
+                                            <img src="/img/people3.jpg" style="width: 250px;">
+                                            <br>
+                                            会计师3
+                                        </div>
+                                        <style>
+                                            .box {
+                                                width: 250px;
+                                                text-align: center;
+                                            }
 
-                                        .box img {
-                                            width: 100%
-                                        }
-                                    </style>
-                                </a>
+                                            .box img {
+                                                width: 100%
+                                            }
+                                        </style>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- 尾部信息 -->
-    <div class="layui-card layui-bg-black" style="width:1440px; height: 150px; border: #9F9F9F;margin:20px auto;text-align: center;">
+        <!-- 尾部信息 -->
+        <div class="layui-card layui-bg-black"
+            style="width:1440px; height: 150px; border: #9F9F9F;margin:20px auto;text-align: center;">
 
             <div class="layui-row">
                 <div class="layui-col-md8 layui-col-md-offset2">
                     <div class="layui-row grid-demo grid-demo-bg1">
-                        <div class="layui-col-md3" >
+                        <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
                                 <a href="/contactInfo.html">
                                     <i class="layui-icon layui-icon-location"
                                         style="font-size: 50px; color: #1E9FFF;"></i> <br>
-                                    <div class="clzalaStyle" style="height: 100%;"> 
+                                    <div class="clzalaStyle" style="height: 100%;">
                                         地址
                                     </div>
-                                </a> 
+                                </a>
                             </div>
                         </div>
-                        <div class="layui-col-md3" >
+                        <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
                                 <a href="/contactInfo.html">
-                                    <i class="layui-icon layui-icon-email"
-                                        style="font-size: 50px; color: #1E9FFF;"></i>
+                                    <i class="layui-icon layui-icon-email" style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>
                                     <div class="clzalaStyle" style="height: 100%;">
                                         电子邮箱
@@ -504,25 +446,25 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="layui-col-md3" >
+                        <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
                                 <a href="/contactInfo.html">
                                     <i class="layui-icon layui-icon-service"
                                         style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>
-                                    <div class="clzalaStyle"  style="height: 100%;">
+                                    <div class="clzalaStyle" style="height: 100%;">
                                         联系电话
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class="layui-col-md3" >
+                        <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
                                 <a href="/contactInfo.html">
                                     <i class="layui-icon layui-icon-login-qq"
                                         style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>
-                                    <div class="clzalaStyle"  style="height: 100%;">
+                                    <div class="clzalaStyle" style="height: 100%;">
                                         QQ
                                     </div>
                                 </a>
@@ -532,9 +474,9 @@
 
                 </div>
             </div>
-        
-    </div>
 
+        </div>
+    </div>
 
     <script src="/js/jquery.min.js"></script>
     <ul class="layui-fixbar">

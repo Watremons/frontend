@@ -87,66 +87,7 @@
 
 <script src="/layui/layui.js"></script>
 
-<!--导航条-->
-<div class="layui-header">
-    <ul class="layui-nav " lay-filter="" style="width:1440px;text-align: center;margin: 0 auto;">
-
-        <li style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
-            <!-- logo -->
-            <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>
-        </li>
-
-        <li class="layui-nav-item " >
-            <a href="./main.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-home iconStyle"></i>
-                首页
-            </a>
-        </li>
-        <li class="layui-nav-item">
-
-            <a href="./businessScope.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-senior iconStyle" ></i>
-                业务范围
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondPeople.html" class="dhlStyle">
-                <i class="layui-icon layui-icon-username iconStyle"></i>
-                会计师介绍
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./secondClassic.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-note iconStyle" ></i>
-                经典案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./caseInProcess2.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-survey iconStyle" ></i>
-                处理中案例
-            </a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="./contactInfo.html"  class ="dhlStyle">
-                <i class="layui-icon layui-icon-dialogue iconStyle" ></i>
-                联系我们
-            </a>
-        </li>
-        <li style="display:inline-block;*display:inline;">
-            <button type="button" 	class="layui-btn layui-btn-normal" onclick="javascrtpt:window.location.href='./login.html'" style="width:100px;margin-top: 10px;margin-left:70px">登录</button>
-        </li>
-    </ul>
-</div>
-<!--导航条JS-->
-<script>
-    //注意：导航 依赖 element 模块，否则无法进行功能性操作
-    layui.use('element', function(){
-        var element = layui.element;
-    });
-</script>
-
-<div style="width:1440px;text-align: center;margin: 0 auto;">
+<div style="width:100%;text-align: center;margin: 0 auto;">
         <ul class="layui-nav layui-nav-tree"  lay-filter="test"style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF" >
             <div style="text-align:center; font-size: 25px;color: #0C0C0C;margin:20px 0px;">
                 <i class="layui-icon layui-icon-username" style="font-size: 30px; "></i>
