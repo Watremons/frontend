@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>联系我们</title>
+</head>
+
+
+
+<link rel="stylesheet" href="layui/css/layui.css">
+
+<style type="text/css">
+    /**
+     * @Description Layui内置导航栏修改样式
+     * @Date 21:22 2020/11/2
+     * @Author:DingJiaXin
+     */
+    .dhlStyle {
+        margin-left: 12px;
+        margin-right: 12px;
+        font-size: 18px;
+    }
+
+
+    /**
+     * @Description Layui内置图标修改样式
+     * @Date 21:22 2020/11/2
+     * @Author:DingJiaXin
+     */
+    .iconStyle {
+        font-size: 25px;
+        color: #C4C0C1;
+    }
+
+    .layui-nav-tree .layui-nav-item a {
+        font-weight: bold;
+        background-color: #FFFFFF;
+        text-align: center;
+        color: rgb(104, 104, 104);
+    }
+
+    .layui-side-scroll {
+        position: relative;
+        width: 220px;
+        height: 100%;
+        overflow-x: hidden;
+        background-color: #ffffff;
+    }
+
+    .container {
+        width: 800px;
+        height: 150px;
+    }
+
+    .boxl {
+        box-sizing: border-box;
+        width: 75%;
+        height: 100%;
+        float: left;
+    }
+
+    .boxr {
+        box-sizing: border-box;
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+
+    ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.pagination li {
+        display: inline;
+    }
+
+    ul.pagination li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    ul.pagination li a.active {
+        background-color: #1E9FFF;
+        color: white;
+    }
+
+    ul.pagination li a:hover:not(.active) {
+        background-color: #ddd;
+    }
+</style>
+</head>
+
+<body>
+
+    <script src="layui/layui.js"></script>
+
+    <!--导航条-->
+    <div class="layui-header">
+        <ul class="layui-nav " lay-filter="" style="width:1440px;text-align: center;margin: 0 auto;">
+
+            <li
+                style="height:50px;width:100px;margin-left:60px ;margin-right:60px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
+                <!-- logo -->
+                <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>
+            </li>
+
+            <li class="layui-nav-item ">
+                <a href="./main.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-home iconStyle"></i>
+                    首页
+                </a>
+            </li>
+            <li class="layui-nav-item">
+
+                <a href="./businessScope.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-senior iconStyle"></i>
+                    业务范围
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./peopleIntro.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-username iconStyle"></i>
+                    会计师介绍
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./caseInProcess2.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-note iconStyle"></i>
+                    经典案例
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./secondClassic.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-survey iconStyle"></i>
+                    处理中案例
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./contactInfo.html" class="dhlStyle">
+                    <i class="layui-icon layui-icon-dialogue iconStyle"></i>
+                    联系我们
+                </a>
+            </li>
+            <li style="display:inline-block;*display:inline;">
+                <button type="button" class="layui-btn layui-btn-normal"
+                    onclick="javascrtpt:window.location.href='./login.html'"
+                    style="width:100px;margin-top: 10px;margin-left:70px">登录</button>
+            </li>
+        </ul>
+    </div>
+    <!--导航条JS-->
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
+
+    <div style="width:1440px;text-align: center;margin: 0 auto;">
+
+        <ul class="layui-nav layui-nav-tree" lay-filter="test"
+            style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF">
+            <div style="text-align:center; font-size: 25px;color: #0C0C0C;margin:20px 0px;">
+                <i class="layui-icon layui-icon-username" style="font-size: 30px; "></i>
+                联系电话
+            </div>
+            <hr class="layui-bg-black" style="margin:0 auto">
+            <li class="layui-nav-item"><a href="./thirdInfo_addr.html">地址</a></li>
+            <hr class="layui-bg-black" style="margin:0 auto">
+            <li class="layui-nav-item"><a href="./thirdInfo_email.html">电子邮箱</a></li>
+            <hr class="layui-bg-black" style="margin:0 auto">
+            <li class="layui-nav-item"><a href="./thirdInfo_tel.html">联系电话</a></li>
+            <hr class="layui-bg-black" style="margin:0 auto">
+            <li class="layui-nav-item"><a href="./thirdInfo_qq.html">QQ/微信</a></li>
+            <hr class="layui-bg-black" style="margin:0 auto">
+
+        </ul>
+
+        <div style="background-color:#EEEEEE;height:500px;margin-top: 20px;margin-left: 220px">
+            <img src="img/caseInProcess1.jpg" style="float:left;margin: 20px 20px;width:300px">
+            <h1 style="padding: 20px"> 联系电话 </h1>
+            <div style="text-align: left">
+                <h3>
+                    联系电话
+                </h3>
+                <h3>
+                    传真
+                </h3>
+                <h3>
+
+                </h3>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="static/script/jquery.min.js"></script>
