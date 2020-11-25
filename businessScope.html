@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>业务范围</title>
 
-    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <style type="text/css">
         /**
@@ -83,78 +85,86 @@
         ul.pagination li a:hover:not(.active) {background-color: #ddd;}
     </style>
 </head>
-<body>
+<body style="width:90%;margin: 0 auto;">
 
 <script src="/layui/layui.js"></script>
 
-<div style="width:100%;text-align: center;margin: 0 auto;">
-        <ul class="layui-nav layui-nav-tree"  lay-filter="test"style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF" >
-            <div style="text-align:center; font-size: 25px;color: #0C0C0C;margin:20px 0px;">
-                <i class="layui-icon layui-icon-username" style="font-size: 30px; "></i>
-                会计师介绍
-            </div>
-            <hr class="layui-bg-black" style="margin:0 auto">
-            <li class="layui-nav-item"  ><a href="">审计</a></li>
-            <hr class="layui-bg-black" style="margin:0 auto">
-            <li class="layui-nav-item"><a href="">业务2</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
-            <li class="layui-nav-item"><a href="">业务3</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
-            <li class="layui-nav-item"><a href="">业务4</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
-            <li class="layui-nav-item"><a href="">业务5</a></li>
-            <hr class="layui-bg-black"style="margin:0 auto">
-        </ul>
+</script>
 
-    <div style="background-color:#EEEEEE;height:500px;margin-top: 20px;margin-left: 220px">
-        <img src="/img/caseInProcess1.jpg" style="float:left;margin: 20px 20px;width:300px">
-        <h1 style="padding: 20px"> 审计</h1>
-        <div style="text-align: left">
-            <h3>
-            审计是由国家授权或接受委托的专职机构和人员，依照国家法规、审计准则和会计理论，运用专门的方法，
-            对被审计单位的财政、财务收支、经营管理活动及相关资料的真实性、正确性、合规性、效益性进行审查和监督，
-            评价经济责任，鉴证经济业务，用以维护财经法纪、改善经营管理、提高经济效益的一项独立性的经济监督活动。
-            </h3>
-            <h3>
-            审计是指专业审核，涉核实公司的会计文件及相关凭证，以便就公司帐目的公正性、一致性和符合一般认可的会计原则上表达意见。
-            </h3>
-            <h3>
-            审计是一项具有独立性的经济监督活动，独立性是审计区别于其他经济监督的特征；审计的基本职能不仅是监督，而且是经济监督，
-            是以第三者身份所实施的监督。审计的主体是从事审计工作的专职机构或专职的人员，是独立的第三者，如国家审计机关、会计师事务所及其人员。
-            审计的对象是被审计单位的财政、财务收支及其他经济活动，这就是说审计对象不仅包括会计信息及其所反映的财政、财务收支活动，
-            还包括其他经济信息及其所反映的其他经济活动。审计的基本工作方式是审查和评价，也即是搜集证据，查明事实，对照标准，做出好坏优劣的判断。
-            审计的主要目标，不仅要审查评价会计资料及其反映的财政、财务收支的真实性和合法性，而且还要审查评价有关经济活动的效益性。
-            </h3>
-            <h3>
-            《中华人民共和国审计法实施条例》第2条对审计所下的定义是:"审计是审计机关依法独立检查被审计单位的会计凭证、会计账簿、会计报表以及其他与财政收支、
-            财务收支有关的资料和资产，监督财政收支、财务收支真实、合法和效益的行为"。
-            </h3>
+	<div style="text-align: center;margin: 0 auto;" id="businessScopeItem">
+			<ul class="layui-nav layui-nav-tree layui-nav-side"  lay-filter="test"style="float:left;text-align:center;margin:0 auto;background-color: #FFFFFF" >
+			  <div style="text-align:center; font-size: 25px;color: #0C0C0C;margin:20px 0px;">
+				  <i class="layui-icon layui-icon-username" style="font-size: 30px; "></i>
+				  业务范围
+			  </div>
+			  <hr class="layui-bg-black" style="margin:0 auto">
+			  <div v-for=" item in business">
+				<li class="layui-nav-item"  ><a :href='item.businessUrl' target="businessIframe">{{item.name}}</a></li>
+				<hr class="layui-bg-black" style="margin:0 auto">  
+			  </div>
+			</ul>
+	</div>
+  <script>
+        new Vue({
+            el: '#businessScopeItem',
+            data: {
+                business: [
+					{
+						name:"业务1",
+						content:"123456789",
+						businessUrl:"./thirdBusinessScope1.html"
+					},
+					{
+						name:"业务2",
+						content:"222222",
+						businessUrl:"./thirdBusinessScope2.html"
+					},
+					{
+						name:"业务3",
+						content:"33333333",
+						businessUrl:"./thirdBusinessScope3.html"
+					}
+				]
+            },
+            created: function () {
+                //为了在内部函数能使用外部函数的this对象，要给它赋值了一个名叫self的变量。
+                this.getAllWorks()
+            },
+            methods: {
+                getAllWorks: function () {
+                    var self = this;
+                    
+                    axios
+                        .get("http://localhost:8080/Apis/getbusinessScopeItem")
+                        .then(response => (
+                           // this.business = response.data.business,
+                            alert(JSON.stringify(response.data))
+                        ))
+                        .catch(function (error) { // 请求失败处理
+                            alert("数据请求失败");
+                        });
+                        
+                },
+				
 
-        </div>
-    </div>
-</div>
+            }
+        })
+    </script>
+	
+	<div  style="height:90vh;margin:0 auto;text-align: center;">
+	
+	    <!-- css样式overflow:hidden表示溢出隐藏 -->
+	   <iframe src="./thirdBusinessScope1.html" name="businessIframe" marginwidth="0" marginheight="0" scrolling="yes"
+	        frameborder="0" height="100%" width="100%" >
+	        
+	    </iframe>
+	    <!-- scrolling="yes"表示在iframe中显示滚动条 -->
+	    <!-- frameborder="0"规定不显示框架周围的边框 -->
+	    <!-- marginheight="1"定义iframe的顶部和底部的边距为1 -->
+	    <!-- marginwidth="1"定义iframe的左侧和右侧的边距为1 -->
+	    <!-- src=""规定在iframe中显示的文档的URL,最初显示的是系统首页 -->
+	</div>
 
-<!--
-<div class="layui-side layui-bg-black">
-
-</div>
-
-<div class="layui-body">
-    <div style="padding: 100px;margin-bottom:400px;">
-        <div class="container">
-            <div class="boxl">
-                <h3>会计师名字</h3>
-                <h5>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</h5>
-            </div>
-            <div class="boxr">
-                <img src="/img/people1.jpg" style="width: 250px;">
-            </div>
-        </div>
-
-
-    </div>
-</div>
--->
 
 </body>
 </html>
