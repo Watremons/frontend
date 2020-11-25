@@ -174,7 +174,7 @@
                         var self = this;
 
                         axios
-                            .get("http://localhost:8080/Apis/getWorksToShow")
+                            .get("/Apis/getWorksToShow")
                             .then(response => (
                                 this.works = response.data.works,
                                 alert(JSON.stringify(response.data))
@@ -249,7 +249,7 @@
                     getAllCases: function () {
                         var self = this;
                         axios
-                            .get("http://localhost:8080/Apis/getCasesToShow")
+                            .get("/Apis/getCasesToShow")
                             .then(response => (
                                 this.cases = response.data.cases,
                                 alert(JSON.stringify(response.data))
@@ -431,7 +431,7 @@
                     <div class="layui-row grid-demo grid-demo-bg1">
                         <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
-                                <a href="./thirdInfo_addr.html">
+                                <a href="./thirdInfo_addr">
                                     <i class="layui-icon layui-icon-location"
                                         style="font-size: 50px; color: #1E9FFF;"></i> <br>
                                     <div class="clzalaStyle" style="height: 100%;">
@@ -442,7 +442,7 @@
                         </div>
                         <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
-                                <a href="./thirdInfo_email.html">
+                                <a href="./thirdInfo_email">
                                     <i class="layui-icon layui-icon-email" style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>
                                     <div class="clzalaStyle" style="height: 100%;">
@@ -453,7 +453,7 @@
                         </div>
                         <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
-                                <a href="./thirdInfo_tel.html">
+                                <a href="./thirdInfo_tel">
                                     <i class="layui-icon layui-icon-service"
                                         style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>
@@ -465,7 +465,7 @@
                         </div>
                         <div class="layui-col-md3">
                             <div class="layui-row" style="text-align: center;padding: 12%;">
-                                <a href="./thirdInfo_qq.html">
+                                <a href="./thirdInfo_qq">
                                     <i class="layui-icon layui-icon-login-qq"
                                         style="font-size: 50px; color: #1E9FFF;"></i>
                                     <br>

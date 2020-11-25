@@ -135,7 +135,7 @@
                     var self = this;
                     
                     axios
-                        .get("http://localhost:8080/Apis/getbusinessScopeItem")
+                        .get("./Apis/getbusinessScopeItem")
                         .then(response => (
                            // this.business = response.data.business,
                             alert(JSON.stringify(response.data))
