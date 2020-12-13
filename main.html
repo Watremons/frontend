@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>湖南华晟会计师事务所</title>
+    <link rel="stylesheet" type="text/css" href="font_Icon/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/chat.css">
     <link rel="stylesheet" href="layui/css/layui.css">
 	<link rel="stylesheet" href="layui/css/modules/layer/default/layer.css">
 	<script src="layui/layui.js"></script>
@@ -201,7 +203,84 @@
 
     </div>
 
-    <ul class="layui-fixbar">
+    <div class="chatContainer">
+        <div class="chatBtn" onclick="">
+            <i class="iconfont icon-xiaoxi1"></i>
+        </div>
+        <div class="chatBox" ref="chatBox" style="display:none">
+            <div class="chatBox-head">
+                <div class="chatBox-head-one">
+                    消息
+                    <div class="chat-close" style="margin: 10px 10px 0 0;font-size: 14px">关闭</div>
+                </div>
+            </div>
+            <div class="chatBox-info">
+                <div class="chatBox-list" ref="chatBoxkuang">
+                    <div class="chatBox-content">
+                        <div class="chatBox-content-demo" id="chatBox-content-demo">
+                            <div class="clearfloat">
+                                <div class="left">
+                                    <div class="chat-message">
+                                        您好，这里是湖南华晟会计师事务所，请问有什么需要帮助？
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatBox-bottom">
+                <div class="chatBox-send">
+                    <div class="div-textarea" contenteditable="true"></div>
+                    <button id="chat-fasong" class="btn-default-styles">
+                        发送信息
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+    //打开/关闭聊天框
+    $(".chatBtn").click(function () {
+        $(".chatBox").toggle(10);
+    })
+    $(".chat-close").click(function () {
+        $(".chatBox").toggle(10);
+    })
+
+    //发送信息
+    $("#chat-fasong").click(function () {
+        var textContent = $(".div-textarea").html().replace(/[\n\r]/g, '<br>')
+        if (textContent != "") {
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"right\"> <div class=\"chat-message\"> " + textContent + " </div> " +
+                " </div> </div>");
+            //发送后清空输入框
+            $(".div-textarea").html("");
+            //聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+            // $.get(
+            //     url, 
+            //     reply.connect,
+            //     function(data){
+            //         alert("Data Loaded: " + data);
+            //     });
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"left\"> <div class=\"chat-message\"> " + reply.connect + " </div> " +
+                " </div> </div>");
+        }
+    });
+    var reply={
+        'connect':'我们这里是湖南华晟会计师事务所'
+    };
+
+</script>
+    <!-- <ul class="layui-fixbar">
         <li class="layui-icon" lay-type="bar1" id="msg">
             
         </li>
@@ -215,10 +294,8 @@
                 scrollTop: 0
             }, 500);
         });
-    </script>
-
-
-    <script>
+    </script> -->
+    <!-- <script>
         //弹出一个页面层
         $('#msg').on('click', function () {
             var layer1 = layui.layer;
@@ -240,7 +317,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
 </body>
 
