@@ -88,15 +88,14 @@
     </style>
 </head>
 
-<body style="width:90%;margin: 0 auto;text-align: center;">
+<body style="width:100%;margin: 0 auto;text-align: center;">
 
     <div>
         <!-- 轮播图  -->
         <div style="text-align: center;width: 100%;margin: 0 auto;text-align: center;">
             <div style="text-align: center;width:100%;margin: 0 auto">
                 <div class="layui-carousel" id="test1" lay-anim lay-indicator="inside" lay-arrow="always"
-                    style="text-align: center;margin-top:10px;width:100%;">
-
+                    style="text-align: center;margin-top:0px;width:100%;">
                     <div carousel-item>
                         <div style="text-align: center;">
                             <img src="img/banner1.jpg" style="width: 100%;">
@@ -122,8 +121,8 @@
                 carousel.render({
                     elem: '#test1',
                     width: '100%' ,//设置容器宽度
-                    height: '300px',
-                    arrow: 'always' //始终显示箭头
+                    height: '340px',
+                    arrow: 'hover' //悬停显示箭头
                     //,anim: 'updown' //切换动画方式
                 });
             });
