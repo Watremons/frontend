@@ -92,37 +92,42 @@
 <div style="width: 80%;margin: 0 auto;">
     <div style="width: 100%;margin: 0 auto;text-align: center">
         <img src="img/logoWithBack.png" alt="企业LOGO" style="width: 50%;text-align: center;margin: 0 auto">
+    </div><br><br>
+    <!-- <h1 style="text-align: center;margin: 0 auto">湖南华晟会计师事务所联系方式</h1><br><br> -->
+    <div style="padding: 20px; background-color: #1E9FFF;">
+        <div class="layui-card">
+        <div class="layui-card-header">
+            <h1 style="margin: 0 auto">湖南华晟会计师事务所联系方式</h1><br><br>
+        </div>
+      </div>
     </div>
-    <h1 style="text-align: center;margin: 0 auto">湖南华晟会计师事务所联系方式</h1>
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">联系地址</h2>
+            <div class="layui-colla-content layui-show">长沙市芙蓉区定王台街道芙蓉中路二段98号明城国际中心1916、1918室</div>
+        </div>
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">联系电话</h2>
+            <div class="layui-colla-content layui-show">0731-88759955</div>
+        </div>
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">开户银行</h2>
+            <div class="layui-colla-content layui-show">中国工商银行长沙市韶山路支行窑岭分理处<br>
+                银行账号：1901007609201001463</div>
+        </div>
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">其他信息</h2>
+            <div class="layui-colla-content layui-show">纳税人识别号：91430102670758726E</div>
+        </div>
+    </div>
+    <br><br>
 
-    <h2 style="line-height: 3em;">
-        一、联系邮箱
-    </h2>
-    <p style="line-height: 2em;font-size: 15px">
-
-
-    </p>
-    <h2 style="line-height: 3em;">
-        二、联系电话
-    </h2>
-    <p style="line-height: 2em;font-size: 15px">
-
-    </p>
-    <h2 style="line-height: 3em;">
-        三、联系电话
-    </h2>
-    <p style="line-height: 2em;font-size: 15px">
-
-
-    </p>
-    <h2 style="line-height: 3em;">
-        四、联系***
-    </h2>
-    <p style="line-height: 2em;font-size: 15px">
-
-    </p>
-
-
+    <script>
+        //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+          var element = layui.element;
+        });
+        </script>
 
 </div>
 
