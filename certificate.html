@@ -1,30 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>业务范围</title>
+    <title>资质证书</title>
 
     <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <script src="layui/layui.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <style>
+        body {
+            overflow: visible;
+        }
+
+        /**
+         * @Description Layui内置导航栏修改样式
+         * @Date 21:22 2020/11/2
+         * @Author:DingJiaXin
+         */
+        .dhlStyle {
+            margin-left: 12px;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+
+        /**
+         * @Description Layui内置图标修改样式
+         * @Date 21:22 2020/11/2
+         * @Author:DingJiaXin
+         */
+        .iconStyle {
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        /**
+        * @Description 可承接业务DIV样式
+        * @Date 21:22 2020/11/2
+        * @Author:DingJiaXin
+        */
+        .kcjywStyle {
+            font: bold 30px arial, sans-serif;
+            color: #AAAAAA;
+            height: 300px;
+
+        }
+
+        /**
+        * @Description 经典案例DIV样式
+        * @Date 21:22 2020/11/3
+        * @Author:Mashidan
+        */
+        .jdanaStyle {
+            font: bold 30px arial, sans-serif;
+            color: #AAAAAA;
+            height: 200px;
+
+        }
+
+        .jdanbStyle {
+            font: bold 16px Univers, sans-serif;
+            color: #666666;
+            height: 40px;
+        }
+
+        /**
+        * @Description 处理中案例DIV样式
+        * @Date 17:23 2020/11/3
+        * @Author:GaoYige
+        */
+        .clzalaStyle {
+            font: bold 30px arial, sans-serif;
+            color: #AAAAAA;
+            height: 200px;
+        }
+
+        .clzalbStyle {
+            font: bold 16px Univers, sans-serif;
+            color: #666666;
+            height: 40px;
+        }
+
+        .content {
+            width: 100%;
+            height: 500px;
+            margin-bottom: 50px;
+        }
+
+        .content h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+
+        .content ul {
+            display: flex;
+        }
+
+        .content li:not(:nth-child(2)) {
+            flex: 1;
+            list-style: none;
+        }
+
+        .content .pic {
+            width: 310px;
+            margin: 100px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            background-color: rgb(246, 246, 246);
+        }
+
+        .content img {
+            display: block;
+            width: 300px;
+            height: 100%;
+            margin: 10px auto;
+        }
+
+        .content span {
+            display: flex;
+            justify-content: center;
+        }
+
+        .line {
+            width: 1px;
+            height: 310px;
+            margin-top: 70px;
+            background-color: #999;
+        }
+
+        .hline {
+            width: 1100px;
+            height: 2px;
+            margin: 10px auto;
+            background-color: #999;
+        }
+    </style>
+
 
 </head>
+
 <body style="width:90%;margin: 0 auto;">
-<div style="width: 80%;margin: 0 auto;">
-    <div style="width: 100%;margin: 0 auto;text-align: center">
-        <img src="img/logoWithBack.png" alt="企业LOGO" style="width: 50%;text-align: center;margin: 0 auto">
+    <div class="layui-layout-admin ">
+
+        <ul class="layui-nav layui-bg-blue" lay-filter="" style="text-align: center;">
+            <li
+                style="height:50px;width:100px;padding: 0;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;">
+                <!-- logo -->
+                <!--                    <i class="layui-icon layui-icon-app" style="font-size: 40px; color: #C4C0C1;"></i>-->
+                <img src="./img/logoWithBack.png" style="width:100%;height:100%">
+            </li>
+
+            <li class="layui-nav-item ">
+                <a href="./main.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-home iconStyle"></i>
+                    首页
+                </a>
+            </li>
+            <li class="layui-nav-item">
+
+                <a href="./businessScope.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-senior iconStyle"></i>
+                    关于我们
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./secondPeople.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-username iconStyle"></i>
+                    资质证书
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./contactInfo.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-note iconStyle"></i>
+                    联系我们
+                </a>
+            </li>
+            <!-- <li class="layui-nav-item">
+                <a href="./caseInProcess2.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-survey iconStyle"></i>
+                    处理中案例
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="./contactInfo.html" class="dhlStyle" target="layui-body-iframe">
+                    <i class="layui-icon layui-icon-dialogue iconStyle"></i>
+                    联系我们
+                </a>
+            </li> -->
+            <li class="layui-nav-item">
+                <button type="button" class="layui-btn layui-btn-normal"
+                    onclick="javascrtpt:window.location.href='./login'">
+                    登录
+                </button>
+            </li>
+        </ul>
+
+        <!--导航条JS-->
+        <script>
+            //注意：导航 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function () {
+                var element = layui.element;
+            });
+        </script>
     </div>
-    <h1 style="text-align: center;margin: 0 auto">湖南华晟会计师事务所（普通合伙）</h1>
-    <h1 style="text-align: center;margin: 0 auto">资质证书</h1>
+    <div class="content">
+        <h1>资质证书</h1>
 
+        <div class="hline"></div>
 
+        <ul>
+            <li>
+                <div class="pic">
+                    <div class="img-wrapper">
+                        <img src="./assets/images/business.jpg" alt="营业执照">
+                    </div>
 
+                    <div class="info">
+                        <span>营业执照</span>
+                    </div>
+                </div>
+            </li>
 
+            <li class="line"></li>
 
-</div>
+            <li>
+                <div class="pic">
+                    <div class="img-wrapper">
+                        <img src="./assets/images/pa_certificate.jpg" alt="执业证书">
+                    </div>
+
+                    <div class="info">
+                        <span>执业证书</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="hline"></div>
+    </div>
+
+    <!-- <footer class="footer section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mt-40">
+                    <h4 class="font-w-600 text-uppercase text-white mb-30">经营地址</h4>
+                    <p class="mb-10">长沙市芙蓉中路二段98号明城国际中心1916、1918室</p> -->
+    <!-- <p class="mb-10">Town. Office No 3456</p>
+                    <p class="mb-10">info@example.com</p> -->
+    <!-- <p>234-5825852763</p>
+                </div>
+                <div class="col-xl-3 col-md-6 mt-40">
+                    <h4 class="font-w-600 text-uppercase text-white mb-30">经营业务范围</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#!">审计业务</a></li>
+                        <li><a href="#!">税务业务</a></li>
+                        <li><a href="#!">工程造价业务</a></li>
+                        <li><a href="#!">咨询业务</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-md-6 mt-40">
+                    <h4 class="font-w-600 text-uppercase text-white mb-30">设立</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#!">财务审计业务部</a></li>
+                        <li><a href="#!">税务鉴证业务部</a></li>
+                        <li><a href="#!">工程审计业务部</a></li>
+                        <li><a href="#!">管理咨询业务部</a></li>
+                        <li><a href="#!">行政综合部</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright @ ITcom 2020 All Right Reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#top" class="scroll-to-top">
+            <span class="fas fa-chevron-up"></span>
+        </a>
+    </div> -->
 </body>
+
 </html>
 
 <script src="js/jquery.min.js"></script>
