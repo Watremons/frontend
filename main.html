@@ -230,13 +230,15 @@
             $.ajax({
                 type: 'POST',
                 url: '/QandA',
+                async: false,
                 data: {
                     question:textContent
                 },
-                success(data){
+                success:function(data){
+                    msg = eval("(" + data + ")");
                     // reply.connect=data.data.answer
                     $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
-                    "<div class=\"left\"> <div class=\"chat-message\"> " + data.data.answer + " </div> " +
+                    "<div class=\"left\"> <div class=\"chat-message\"> " + msg.answer + " </div> " +
                     " </div> </div>");
                 }
             });
