@@ -234,17 +234,17 @@
                     question:textContent
                 },
                 success(data){
-                    reply.connect=data.answer
+                    // reply.connect=data.data.answer
+                    $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                    "<div class=\"left\"> <div class=\"chat-message\"> " + data.data.answer + " </div> " +
+                    " </div> </div>");
                 }
             });
-            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
-                "<div class=\"left\"> <div class=\"chat-message\"> " + reply.connect + " </div> " +
-                " </div> </div>");
         }
     });
-    var reply={
-        'connect':'我们这里是湖南华晟会计师事务所'
-    };
+    // var reply={
+    //     'connect':'我们这里是湖南华晟会计师事务所'
+    // };
 
 </script>
     <!-- <ul class="layui-fixbar">
