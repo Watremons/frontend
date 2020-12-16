@@ -232,8 +232,7 @@
                 data: textContent,
                 success(data){
                     reply.connect=data.answer
-                },
-                dataType: json
+                }
             });
             $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
                 "<div class=\"left\"> <div class=\"chat-message\"> " + reply.connect + " </div> " +
