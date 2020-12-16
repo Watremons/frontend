@@ -230,8 +230,9 @@
                 type: 'POST',
                 url: '/QandA',
                 data: textContent,
-                success: reply.connect=data.answer,
-                dataType: json
+                success(data){
+                    reply.connect=data.answer
+                }
             });
             $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
                 "<div class=\"left\"> <div class=\"chat-message\"> " + reply.connect + " </div> " +
