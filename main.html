@@ -226,10 +226,13 @@
             $(document).ready(function () {
                 $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
             });
+            alert(textContent);
             $.ajax({
                 type: 'POST',
                 url: '/QandA',
-                data: textContent,
+                data: {
+                    question:textContent
+                },
                 success(data){
                     reply.connect=data.answer
                 }
