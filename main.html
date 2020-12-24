@@ -8,11 +8,9 @@
     <link rel="stylesheet" type="text/css" href="font_Icon/iconfont.css">
     <link rel="stylesheet" type="text/css" href="layui/css/chat.css">
     <link rel="stylesheet" href="layui/css/layui.css">
-    <link rel="stylesheet" href="layui/css/modules/layer/default/layer.css">
     <link rel="icon" href="./img/favicon.ico">
 	<script src="layui/layui.js"></script>
 	<script src="js/jquery.min.js"></script>
-	<script src="layui/lay/modules/layer.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style type="text/css">
@@ -228,14 +226,13 @@
             });
             $.ajax({
                 type: 'POST',
-                url: '/QandA',
+                url: '/QandA/Answering',
                 async: false,
                 data: {
                     question:textContent
                 },
                 success:function(data){
                     msg = eval("(" + data + ")");
-                    // reply.connect=data.data.answer
                     $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
                     "<div class=\"left\"> <div class=\"chat-message\"> " + msg.answer + " </div> " +
                     " </div> </div>");
@@ -243,49 +240,8 @@
             });
         }
     });
-    // var reply={
-    //     'connect':'我们这里是湖南华晟会计师事务所'
-    // };
 
 </script>
-    <!-- <ul class="layui-fixbar">
-        <li class="layui-icon" lay-type="bar1" id="msg">
-            
-        </li>
-        <li class="layui-icon layui-fixbar-top" id="btn_top" lay-type="top" style="display: list-item;">
-            
-        </li>
-    </ul>
-    <script type="text/javascript">
-        $('#btn_top').click(function () {
-            $('html,body').animate({
-                scrollTop: 0
-            }, 500);
-        });
-    </script> -->
-    <!-- <script>
-        //弹出一个页面层
-        $('#msg').on('click', function () {
-            var layer1 = layui.layer;
-            layer1.open({
-                type: 1,
-                area: ['500px', '385px'],
-                shadeClose: true, //点击遮罩关闭
-                content: '\<\div style="padding:20px;">'+
-								'<textarea  rows="10" cols="60">你好<\/textarea>'+
-								'<textarea  rows="3" cols="60" style="margin-top: 10px">请输入问题<\/textarea>'+
-								'<\/div>',
-                btn: ['发送', '关闭'],
-                yes: function (index, layero) {
-                    layer.msg('发送成功');
-                },
-                btn2: function (index, layero) {
-                    layer.msg('关闭窗口');
-                    //return false 开启该代码可禁止点击该按钮关闭
-                }
-            });
-        });
-    </script> -->
 
 </body>
 
